@@ -1,0 +1,28 @@
+{
+  "name": "servion",
+  "version": "1.0.0",
+  "description": "DRY File server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OptimalBits/servion.git"
+  },
+  "keywords": [
+    "file",
+    "server",
+    "static"
+  ],
+  "author": "manast",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OptimalBits/servion/issues"
+  },
+  "homepage": "https://github.com/OptimalBits/servion#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mkdirp": "^0.5.1"
+  }
+}

@@ -15,8 +15,11 @@ your application.
 var servion = require('servion');
 
 servion({
- backend: servion.disk('/my/files/path'),
- port: 8080 
+ backend: servion.disk({
+   path: '/my/files/path',
+   temp: '/my/temp/files'
+ }),
+  port: 8080,
 });
 ```
 
@@ -30,3 +33,7 @@ GET FILE:
 curl localhost:8080/my/foo/bar/file.mp4
 ```
 
+DELETE FILE:
+```
+curl -X DELETE localhost:8080/my/foo/bar/file.mp4
+```
