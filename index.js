@@ -14,8 +14,14 @@ var Servion = function(opts){
 Servion.disk = function(opts){
   var app = express();
 
-  var temp = opts.temp; // TODO: support for tmp files.
-  // tmp dir can be used for files that can be removed anytime.
+  if(opts.cors){
+    console.log("CORS!")
+    app.use(function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
+    });
+  }
 
   app.use('/', express.static(opts.path));
 
